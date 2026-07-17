@@ -1,0 +1,87 @@
+.gallery {
+  padding: 48px 0 100px;
+}
+
+.gallery__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.gallery__title {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.gallery__subtitle {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 22px;
+}
+
+/* Empty state */
+.gallery-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 80px 20px;
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-strong);
+  color: var(--text-tertiary);
+}
+
+.gallery-empty__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-lg);
+  background: var(--accent-gradient-soft);
+  color: var(--accent-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.gallery-empty h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.gallery-empty p {
+  max-width: 320px;
+  font-size: 0.88rem;
+  color: var(--text-tertiary);
+}
+
+/* Skeleton loading cards */
+.gallery-skeleton-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-solid);
+  padding-bottom: 18px;
+}
+
+.gallery-skeleton-card__media {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(100deg, var(--bg) 30%, var(--surface-hover) 50%, var(--bg) 70%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.gallery-skeleton-card__line {
+  height: 11px;
+  margin: 14px 18px 0;
+  border-radius: 6px;
+  background: var(--bg);
+}
